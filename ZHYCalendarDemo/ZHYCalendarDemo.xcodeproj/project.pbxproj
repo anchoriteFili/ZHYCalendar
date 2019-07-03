@@ -13,6 +13,9 @@
 		D6D82FAE22CCA75600E1D79D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6D82FAD22CCA75600E1D79D /* Assets.xcassets */; };
 		D6D82FB122CCA75600E1D79D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D82FAF22CCA75600E1D79D /* LaunchScreen.storyboard */; };
 		D6D82FB422CCA75600E1D79D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D82FB322CCA75600E1D79D /* main.m */; };
+		D6D82FC022CCA81700E1D79D /* CalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D82FBB22CCA81700E1D79D /* CalendarView.xib */; };
+		D6D82FC122CCA81700E1D79D /* MyCalendarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D82FBC22CCA81700E1D79D /* MyCalendarItem.m */; };
+		D6D82FC222CCA81700E1D79D /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D82FBD22CCA81700E1D79D /* CalendarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		D6D82FB022CCA75600E1D79D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6D82FB222CCA75600E1D79D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6D82FB322CCA75600E1D79D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D6D82FBB22CCA81700E1D79D /* CalendarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarView.xib; sourceTree = "<group>"; };
+		D6D82FBC22CCA81700E1D79D /* MyCalendarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCalendarItem.m; sourceTree = "<group>"; };
+		D6D82FBD22CCA81700E1D79D /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
+		D6D82FBE22CCA81700E1D79D /* MyCalendarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCalendarItem.h; sourceTree = "<group>"; };
+		D6D82FBF22CCA81700E1D79D /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 		D6D82FA322CCA75400E1D79D /* ZHYCalendarDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D6D82FBA22CCA81700E1D79D /* Source */,
 				D6D82FA422CCA75400E1D79D /* AppDelegate.h */,
 				D6D82FA522CCA75400E1D79D /* AppDelegate.m */,
 				D6D82FA722CCA75400E1D79D /* ViewController.h */,
@@ -69,6 +78,19 @@
 				D6D82FB322CCA75600E1D79D /* main.m */,
 			);
 			path = ZHYCalendarDemo;
+			sourceTree = "<group>";
+		};
+		D6D82FBA22CCA81700E1D79D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D6D82FBB22CCA81700E1D79D /* CalendarView.xib */,
+				D6D82FBE22CCA81700E1D79D /* MyCalendarItem.h */,
+				D6D82FBC22CCA81700E1D79D /* MyCalendarItem.m */,
+				D6D82FBD22CCA81700E1D79D /* CalendarView.m */,
+				D6D82FBF22CCA81700E1D79D /* CalendarView.h */,
+			);
+			name = Source;
+			path = ../../Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +152,7 @@
 			files = (
 				D6D82FB122CCA75600E1D79D /* LaunchScreen.storyboard in Resources */,
 				D6D82FAE22CCA75600E1D79D /* Assets.xcassets in Resources */,
+				D6D82FC022CCA81700E1D79D /* CalendarView.xib in Resources */,
 				D6D82FAC22CCA75400E1D79D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,7 +166,9 @@
 			files = (
 				D6D82FA922CCA75400E1D79D /* ViewController.m in Sources */,
 				D6D82FB422CCA75600E1D79D /* main.m in Sources */,
+				D6D82FC122CCA81700E1D79D /* MyCalendarItem.m in Sources */,
 				D6D82FA622CCA75400E1D79D /* AppDelegate.m in Sources */,
+				D6D82FC222CCA81700E1D79D /* CalendarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
