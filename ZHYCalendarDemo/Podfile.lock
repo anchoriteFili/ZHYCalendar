@@ -1,0 +1,16 @@
+PODS:
+  - ZHYCalendar (0.0.1)
+
+DEPENDENCIES:
+  - ZHYCalendar (from `../`)
+
+EXTERNAL SOURCES:
+  ZHYCalendar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ZHYCalendar: 175fd48e84b6e30fef7d5d2206ba80ba87fd535d
+
+PODFILE CHECKSUM: 7c91e090688ad11c74f965afc4fc0d62095b9700
+
+COCOAPODS: 1.7.3

@@ -1,0 +1,6 @@
+framework module ZHYCalendar {
+  umbrella header "ZHYCalendar-umbrella.h"
+
+  export *
+  module * { export * }
+}

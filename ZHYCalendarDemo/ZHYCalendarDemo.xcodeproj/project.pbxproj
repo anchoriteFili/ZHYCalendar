@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7039EBB5611999D5B74EFDE5 /* Pods-ZHYCalendarDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHYCalendarDemo.release.xcconfig"; path = "Target Support Files/Pods-ZHYCalendarDemo/Pods-ZHYCalendarDemo.release.xcconfig"; sourceTree = "<group>"; };
+		751E4CB5AE974A6DA72DFA62 /* Pods-ZHYCalendarDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHYCalendarDemo.debug.xcconfig"; path = "Target Support Files/Pods-ZHYCalendarDemo/Pods-ZHYCalendarDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D6D82FA122CCA75400E1D79D /* ZHYCalendarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHYCalendarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D82FA422CCA75400E1D79D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6D82FA522CCA75400E1D79D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,11 +41,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		225935BED5B2AC49AB31FD9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23B5F1CC11D119B01B0DEBBE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				751E4CB5AE974A6DA72DFA62 /* Pods-ZHYCalendarDemo.debug.xcconfig */,
+				7039EBB5611999D5B74EFDE5 /* Pods-ZHYCalendarDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D6D82F9822CCA75400E1D79D = {
 			isa = PBXGroup;
 			children = (
 				D6D82FA322CCA75400E1D79D /* ZHYCalendarDemo */,
 				D6D82FA222CCA75400E1D79D /* Products */,
+				23B5F1CC11D119B01B0DEBBE /* Pods */,
+				225935BED5B2AC49AB31FD9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6D82FB722CCA75600E1D79D /* Build configuration list for PBXNativeTarget "ZHYCalendarDemo" */;
 			buildPhases = (
+				98983A35386F4061F3179C0C /* [CP] Check Pods Manifest.lock */,
 				D6D82F9D22CCA75400E1D79D /* Sources */,
 				D6D82F9E22CCA75400E1D79D /* Frameworks */,
 				D6D82F9F22CCA75400E1D79D /* Resources */,
+				3F8CAC16166FBCA1ADFDE49B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +157,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F8CAC16166FBCA1ADFDE49B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZHYCalendarDemo/Pods-ZHYCalendarDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZHYCalendarDemo/Pods-ZHYCalendarDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZHYCalendarDemo/Pods-ZHYCalendarDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98983A35386F4061F3179C0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZHYCalendarDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D6D82F9D22CCA75400E1D79D /* Sources */ = {
@@ -283,6 +347,7 @@
 		};
 		D6D82FB822CCA75600E1D79D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 751E4CB5AE974A6DA72DFA62 /* Pods-ZHYCalendarDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +366,7 @@
 		};
 		D6D82FB922CCA75600E1D79D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7039EBB5611999D5B74EFDE5 /* Pods-ZHYCalendarDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

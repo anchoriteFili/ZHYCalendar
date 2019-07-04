@@ -19,7 +19,9 @@ CGFloat scrollHeight = 216.0; // 全局变量scrollView的高度
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self = [[[NSBundle mainBundle] loadNibNamed:@"CalendarView" owner:self options:nil] lastObject];
+        
+        
+        self = [[[NSBundle bundleForClass:[self class]] loadNibNamed:@"CalendarView" owner:self options:nil] lastObject];
         
 #pragma mark 获取当前月份和年份
         NSDate *now = [NSDate date];
@@ -429,7 +431,7 @@ CGFloat scrollHeight = 216.0; // 全局变量scrollView的高度
     [UIView animateWithDuration:0.2 animations:^{
         self.frame = CGRectMake(0, HEIGHT+20, WIDTH, 335);
     } completion:^(BOOL finished) {
-        [self.superview removeFromSuperview];
+//        [self.superview removeFromSuperview];
     }];
 }
 

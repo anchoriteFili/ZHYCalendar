@@ -27,7 +27,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="DSG-Jw-dfY"/>
                                     </constraints>
-                                    <state key="normal" title="2016">
+                                    <state key="normal" title="2019">
                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
@@ -41,7 +41,7 @@
                                         <constraint firstAttribute="width" constant="30" id="RuG-4O-55P"/>
                                         <constraint firstAttribute="height" constant="30" id="UNY-lP-Poc"/>
                                     </constraints>
-                                    <state key="normal" image="CalendarView_rightArrow"/>
+                                    <state key="normal" image="CalendarView_rightArrow.png"/>
                                     <connections>
                                         <action selector="nextMonthButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="HOU-Mb-Xim"/>
                                     </connections>
@@ -53,7 +53,7 @@
                                         <constraint firstAttribute="width" constant="30" id="u2q-q0-tIZ"/>
                                         <constraint firstAttribute="height" constant="30" id="yVC-7A-zHc"/>
                                     </constraints>
-                                    <state key="normal" image="CalendarView_leftArrow"/>
+                                    <state key="normal" image="CalendarView_leftArrow.png"/>
                                     <connections>
                                         <action selector="lastMonthButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="TYf-ga-s21"/>
                                     </connections>
@@ -78,7 +78,7 @@
                                         <constraint firstAttribute="height" constant="30" id="3mK-Is-afW"/>
                                         <constraint firstAttribute="width" constant="30" id="LKf-Z2-vpy"/>
                                     </constraints>
-                                    <state key="normal" image="CalendarView_rightArrow"/>
+                                    <state key="normal" image="CalendarView_rightArrow.png"/>
                                     <connections>
                                         <action selector="nextYearButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="nnG-zr-cJU"/>
                                     </connections>
@@ -90,7 +90,7 @@
                                         <constraint firstAttribute="height" constant="30" id="CAq-sO-Ce4"/>
                                         <constraint firstAttribute="width" constant="30" id="WFv-et-wU7"/>
                                     </constraints>
-                                    <state key="normal" image="CalendarView_leftArrow"/>
+                                    <state key="normal" image="CalendarView_leftArrow.png"/>
                                     <connections>
                                         <action selector="lastYearButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="VIa-mh-fVj"/>
                                     </connections>
@@ -611,7 +611,7 @@
         </view>
     </objects>
     <resources>
-        <image name="CalendarView_leftArrow" width="25" height="25"/>
-        <image name="CalendarView_rightArrow" width="25" height="25"/>
+        <image name="CalendarView_leftArrow.png" width="50" height="50"/>
+        <image name="CalendarView_rightArrow.png" width="50" height="50"/>
     </resources>
 </document>
