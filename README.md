@@ -2,8 +2,8 @@
 
 ### 说明：
 
-> 可进行单个日期选择和日期区间选择的简约的日历小工具。<br>
-> **时间区间逻辑**：开始日期不能大于结束时间，结束时间不能小于开始日期。
+> 可进行`单个日期选择`和`日期区间选择`的简约的`日历小工具`。<br>
+> **时间区间逻辑**：`开始日期`不能大于`结束时间`，`结束时间`不能小于`开始日期`。
 
 #### 添加方法
 
@@ -22,6 +22,8 @@ pod 'ZHYCalendar'
 2. 直接添加CalendarView
 
 ```objc
+@property (nonatomic,retain) CalendarView *calenderView; // 日历view
+
 #pragma mark 日历view懒加载
 - (CalendarView *)calenderView {
     if (!_calenderView) {
