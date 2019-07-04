@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDB8A7C8C6C58B1338DB3ADF /* Pods_ZHYCalendarDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABC4D9D04146A8A1197A880 /* Pods_ZHYCalendarDemo.framework */; };
 		D6D82FA622CCA75400E1D79D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D82FA522CCA75400E1D79D /* AppDelegate.m */; };
 		D6D82FA922CCA75400E1D79D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D82FA822CCA75400E1D79D /* ViewController.m */; };
 		D6D82FAC22CCA75400E1D79D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D82FAA22CCA75400E1D79D /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		D6D82FB022CCA75600E1D79D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6D82FB222CCA75600E1D79D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6D82FB322CCA75600E1D79D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EABC4D9D04146A8A1197A880 /* Pods_ZHYCalendarDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZHYCalendarDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDB8A7C8C6C58B1338DB3ADF /* Pods_ZHYCalendarDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 		225935BED5B2AC49AB31FD9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EABC4D9D04146A8A1197A880 /* Pods_ZHYCalendarDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

@@ -428,48 +428,40 @@ CGFloat scrollHeight = 216.0; // 全局变量scrollView的高度
 #pragma mark 取消按钮点击事件
 - (IBAction)cancalButtonClick:(UIButton *)sender {
     
-    [UIView animateWithDuration:0.2 animations:^{
-        self.frame = CGRectMake(0, HEIGHT+20, WIDTH, 335);
-    } completion:^(BOOL finished) {
-//        [self.superview removeFromSuperview];
-    }];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(calendarViewDelegateEnsureDate:withDateStyle:)]) {
+        [self.delegate calendarViewDelegateEnsureDate:@"" withDateStyle:CancelDateStyleEnum];
+    }
 }
 
 
 #pragma mark 确定按钮点击事件
 - (IBAction)ensureButtonClick:(UIButton *)sender {
     
-    if (self.dateStyleEnum == EarlestDateStyleEnum) {
-        
-        if (self.selectedDate.length) {
-            self.earliestDate = self.selectedDate;
-            if (self.delegate && [self.delegate respondsToSelector:@selector(selectEnsureDate:)]) {
-                [self.delegate selectEnsureDate:self.earliestDate];
-            }
-        }
-        
-        self.earliestDateButton = self.currentButton;
-        self.earliestDatePage = self.transferPage;
-        
-    } else if (self.dateStyleEnum == LatestDateStyleEnum) {
+    if (self.dateStyleEnum == LatestDateStyleEnum) {
         
         if (self.selectedDate.length) {
             self.latestDate = self.selectedDate;
-            if (self.delegate && [self.delegate respondsToSelector:@selector(selectEnsureDate:)]) {
-                [self.delegate selectEnsureDate:self.latestDate];
+            if (self.delegate && [self.delegate respondsToSelector:@selector(calendarViewDelegateEnsureDate:withDateStyle:)]) {
+                [self.delegate calendarViewDelegateEnsureDate:self.earliestDate withDateStyle:LatestDateStyleEnum];
             }
         }
         
         self.latestDateButton = self.currentButton;
         self.latestDatePage = self.transferPage;
+        
+    } else {
+        
+        if (self.selectedDate.length) {
+            self.earliestDate = self.selectedDate;
+            
+            if (self.delegate && [self.delegate respondsToSelector:@selector(calendarViewDelegateEnsureDate:withDateStyle:)]) {
+                [self.delegate calendarViewDelegateEnsureDate:self.earliestDate withDateStyle:EarlestDateStyleEnum];
+            }
+        }
+        
+        self.earliestDateButton = self.currentButton;
+        self.earliestDatePage = self.transferPage;
     }
-
-    [UIView animateWithDuration:0.2 animations:^{
-        self.frame = CGRectMake(0, HEIGHT+20, WIDTH, 335);
-    } completion:^(BOOL finished) {
-//        [self.superview removeFromSuperview];
-    }];
-    
 }
 
 #pragma mark 刷新页面的数据

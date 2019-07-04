@@ -22,23 +22,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAO-dq-Ut2">
-                                <rect key="frame" x="93.5" y="269" width="133" height="30"/>
+                                <rect key="frame" x="70" y="269" width="80" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Ujl-bm-HVk"/>
-                                    <constraint firstAttribute="width" constant="133" id="z5F-yX-bin"/>
+                                    <constraint firstAttribute="width" constant="80" id="z5F-yX-bin"/>
                                 </constraints>
-                                <state key="normal" title="弹出日历">
+                                <state key="normal" title="日期开始">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tIR-wH-i55"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择的日期" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFe-Ff-lxJ">
-                                <rect key="frame" x="0.0" y="212" width="320" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIe-0d-64t">
+                                <rect key="frame" x="170" y="269" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="AS0-A0-SCr"/>
+                                    <constraint firstAttribute="height" constant="30" id="Cd1-RQ-Hnc"/>
+                                </constraints>
+                                <state key="normal" title="日期结束">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rtL-N7-eq6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开始日期" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFe-Ff-lxJ">
+                                <rect key="frame" x="75.5" y="212" width="69.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="MzS-gJ-db2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="结束日期" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAV-Uh-hjg">
+                                <rect key="frame" x="175.5" y="212" width="69.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="39B-bf-Aoz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -48,14 +71,18 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="CAO-dq-Ut2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="A40-2X-fuX"/>
-                            <constraint firstItem="XFe-Ff-lxJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HgR-B2-dvH"/>
-                            <constraint firstItem="CAO-dq-Ut2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ksg-IP-yKL"/>
+                            <constraint firstItem="CAO-dq-Ut2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-50" id="Ksg-IP-yKL"/>
+                            <constraint firstItem="CAO-dq-Ut2" firstAttribute="centerX" secondItem="XFe-Ff-lxJ" secondAttribute="centerX" id="XQ4-QV-bZ3"/>
+                            <constraint firstItem="ZIe-0d-64t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="cI5-CF-vbA"/>
+                            <constraint firstItem="ZIe-0d-64t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eg2-9p-NKG"/>
+                            <constraint firstItem="ZIe-0d-64t" firstAttribute="centerX" secondItem="uAV-Uh-hjg" secondAttribute="centerX" id="hSv-mp-jrh"/>
                             <constraint firstItem="CAO-dq-Ut2" firstAttribute="top" secondItem="XFe-Ff-lxJ" secondAttribute="bottom" constant="36" id="puI-pp-Yb8"/>
-                            <constraint firstAttribute="trailing" secondItem="XFe-Ff-lxJ" secondAttribute="trailing" id="u2D-Dl-nUN"/>
+                            <constraint firstItem="uAV-Uh-hjg" firstAttribute="bottom" secondItem="XFe-Ff-lxJ" secondAttribute="bottom" id="qqj-4p-Xr5"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dateLabel" destination="XFe-Ff-lxJ" id="aLU-eQ-zJy"/>
+                        <outlet property="dateLabelEnd" destination="uAV-Uh-hjg" id="gNV-Tq-VzS"/>
+                        <outlet property="dateLabelbBegin" destination="XFe-Ff-lxJ" id="FW1-Lj-xnM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

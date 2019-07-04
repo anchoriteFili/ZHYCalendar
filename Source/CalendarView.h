@@ -12,12 +12,22 @@
 
 // 底部三个按钮的选择
 typedef NS_ENUM(NSInteger, DateStyleEnum) {
-    EarlestDateStyleEnum, // 最早时间
-    LatestDateStyleEnum // 最晚时间
+    EarlestDateStyleEnum, // 完成按钮点击_起始时间状态
+    LatestDateStyleEnum, // 完成按钮点击_结束时间状态
+    CancelDateStyleEnum  // 取消按钮点击
 };
 
 @protocol CalendarViewDelegate <NSObject>
-- (void)selectEnsureDate:(NSString *)ensureDate; // 点击确定时得到的时间
+
+
+/**
+日历返回的日期
+
+ @param ensureDate 返回的日期
+ @param style 标记状态是起始时间/结束时间/取消按钮取消了选择
+ */
+- (void)calendarViewDelegateEnsureDate:(NSString *)ensureDate withDateStyle:(DateStyleEnum)style;
+
 @end
 
 @interface CalendarView : UIView<UIScrollViewDelegate,MyCalendarItemDelegate>
@@ -68,7 +78,13 @@ typedef NS_ENUM(NSInteger, DateStyleEnum) {
 #pragma mark 创建代理属性
 @property (nonatomic,assign) id<CalendarViewDelegate,NSObject> delegate;
 
-#pragma mark 刷新页面的数据
+
+
+/**
+ 当选用有时间区间日历时刷新状态
+
+ @param dateStyleEnum 调起日历时标记是开始时间或者是结束时间
+ */
 - (void)updateCalendarViewWithDateStyleEnum:(DateStyleEnum)dateStyleEnum;
 
 #pragma mark 日历内部按钮是否可点击做处理
