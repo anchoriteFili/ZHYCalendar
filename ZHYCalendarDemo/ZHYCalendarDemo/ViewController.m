@@ -39,6 +39,7 @@
         [self.calenderView updateCalendarViewWithDateStyleEnum:LatestDateStyleEnum];
     }
     
+    // 日历显示动画
     [UIView animateWithDuration:0.2 animations:^{
         self.calenderView.frame = CGRectMake(0, HEIGHT-350, WIDTH, 350);
     }];
