@@ -1,9 +1,11 @@
+![](https://github.com/anchoriteFili/ZHYCalendar/blob/master/ZHYCalendar.png)<br>
+
 ### 说明：
 
-> 可进行单个日期选择和日期区间选择的简约的日历小工具。
+> 可进行单个日期选择和日期区间选择的简约的日历小工具。<br>
+> **时间区间逻辑**：开始日期不能大于结束时间，结束时间不能小于开始日期。
 
 #### 添加方法
----
 
 ```ruby
 pod 'ZHYCalendar'
@@ -42,10 +44,8 @@ pod 'ZHYCalendar'
     
     // 对日历中的各种的状态进行处理
     if ([sender.titleLabel.text isEqualToString:@"日期开始"]) {
-        
         [self.calenderView updateCalendarViewWithDateStyleEnum:EarlestDateStyleEnum];
     } else if ([sender.titleLabel.text isEqualToString:@"日期结束"]) {
-        
         [self.calenderView updateCalendarViewWithDateStyleEnum:LatestDateStyleEnum];
     }
     

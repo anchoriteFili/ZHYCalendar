@@ -384,7 +384,6 @@ CGFloat scrollHeight = 216.0; // 全局变量scrollView的高度
             
             button.enabled = YES;
         }
-        
     }
     
     UIButton *button = (UIButton  *)[self.monthSelectView viewWithTag:self.monthTag];
@@ -437,30 +436,20 @@ CGFloat scrollHeight = 216.0; // 全局变量scrollView的高度
 #pragma mark 确定按钮点击事件
 - (IBAction)ensureButtonClick:(UIButton *)sender {
     
-    if (self.dateStyleEnum == LatestDateStyleEnum) {
-        
-        if (self.selectedDate.length) {
+    if (self.selectedDate.length) {
+        if (self.dateStyleEnum == LatestDateStyleEnum) {
             self.latestDate = self.selectedDate;
-            if (self.delegate && [self.delegate respondsToSelector:@selector(calendarViewDelegateEnsureDate:withDateStyle:)]) {
-                [self.delegate calendarViewDelegateEnsureDate:self.earliestDate withDateStyle:LatestDateStyleEnum];
-            }
-        }
-        
-        self.latestDateButton = self.currentButton;
-        self.latestDatePage = self.transferPage;
-        
-    } else {
-        
-        if (self.selectedDate.length) {
+            self.latestDateButton = self.currentButton;
+            self.latestDatePage = self.transferPage;
+        } else {
             self.earliestDate = self.selectedDate;
-            
-            if (self.delegate && [self.delegate respondsToSelector:@selector(calendarViewDelegateEnsureDate:withDateStyle:)]) {
-                [self.delegate calendarViewDelegateEnsureDate:self.earliestDate withDateStyle:EarlestDateStyleEnum];
-            }
+            self.earliestDateButton = self.currentButton;
+            self.earliestDatePage = self.transferPage;
         }
         
-        self.earliestDateButton = self.currentButton;
-        self.earliestDatePage = self.transferPage;
+        if (self.delegate && [self.delegate respondsToSelector:@selector(calendarViewDelegateEnsureDate:withDateStyle:)]) {
+            [self.delegate calendarViewDelegateEnsureDate:self.selectedDate withDateStyle:self.dateStyleEnum];
+        }
     }
 }
 
